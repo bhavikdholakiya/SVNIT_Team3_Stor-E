@@ -18,7 +18,7 @@ router.route("/login").post(async (req, res, next) => {
           expires: new Date(Date.now() + 5000000000),
           httpOnly: true,
         });
-       
+        // res.redirect('homepage');
         res.send({ status: "done" });
       } else {
         let error = new Error("Enter Valid Credantials");
@@ -27,22 +27,33 @@ router.route("/login").post(async (req, res, next) => {
     } catch (err) {
         res.send(err);
     }
-  });
+  })
+  .get(async (req, res, next) => {
+    res.statusCode = 200;
+    res.render('login');
+});
 
 //signup-------------------------------------------------------------------------
-  router.route("/signup").post(async (req, res, next) => {
+  router.route("/signup")
+    .post(async (req, res, next) => {
     try {
       let user = new User(req.body);
       let token = await user.createAuthToken();
+      await user.save();
       res.cookie("jwt", token, {
         expires: new Date(Date.now() + 5000000000),
         httpOnly: true,
       });
+      
       res.send(user);
     } catch (err) {
       next(err);
     }
-  });
+  })
+  .get(async (req, res, next) => {
+    res.statusCode = 200;
+    res.render('signup');
+  })
 
 // signout-----------------------------------------------------------------
   router.route("/signout").post(isAuth, async (req, res, next) => {

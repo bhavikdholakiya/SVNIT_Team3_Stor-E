@@ -19,13 +19,15 @@ const connection=mongoose.connect(process.env.MONGO_URL).then(()=>{
 
 
 //SETTING ENGINES
+app.use(express.static('css'));
+
 app.set('views',path.join(__dirname,'/views'));
 app.set('view engine','ejs');
-
-
+app.use(express.static("public"));
 app.get('/',(req,res)=>{
     res.render("homepage");
 })
+
 app.use("/user",userRouter);
 app.use("/product",productRouter);
 //ERROR HANDLER

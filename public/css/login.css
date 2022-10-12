@@ -1,0 +1,156 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.container{
+    
+    height:100%;
+    width:100%;    
+    background-color:#275442;
+    background-position: center;
+    background-size:auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    position: absolute;
+    background-image:linear-gradient(#40866A,#275442);
+    background-attachment: fixed;
+}
+
+#Login_logo
+{
+    margin-top: -95%;
+    margin-bottom:-7% ;
+    top: -25%;
+    position: relative;
+    left: 23%;
+}
+
+
+.wrapper{
+    width:400px;
+    height:300px;
+    color: #000;
+    top: 55%;
+    left:30%;
+    padding: 60px 30px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    
+}
+
+.wrapper input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.wrapper input[type=text], .wrapper input[type=password]{
+    border:3px white solid;
+    display: inline;
+    display: block;
+    margin: 5%;
+    text-align: left;
+    border-radius:10px;
+    background: transparent;
+    font-family: 'Raleway', sans-serif;
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    outline: none;
+    opacity: 1;
+    color: white;
+}
+
+::placeholder{
+    font-size: 20px;
+    color: white;
+}
+
+
+#login_button{
+    border-radius: 30px;
+    border-color: #BABE3C;
+    border: 0px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    outline: none;
+    height: 35px;
+    width: 35%;
+    background:#BABE3C;
+    color: #3E3E3E;
+    font-family: 'Yeseva One', cursive;
+    font-size: 20px;
+       
+}
+
+.wrapper input[type=submit]:hover{
+    cursor: pointer
+}
+
+.wrapper a{
+    font-size: 14px;
+    color:white;
+    opacity: 1;
+}
+
+.wrapper a:hover{
+    color: white;
+    opacity: 1;
+}
+
+.bottom-text{
+    color:white;
+}
+
+/*.bottom-text input{
+    width:10%;
+    float: left;
+}
+*/
+.bottom-text a{
+    display: block;
+    margin: auto;
+    text-align: center;
+    /*padding-left: 35%;*/
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+
+.option a{
+    
+    font-size: 15;
+    /*padding-left: 5%;*/
+    font-family: 'Raleway', sans-serif;
+    display: block;
+    margin: 2%;
+    text-align: center;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
