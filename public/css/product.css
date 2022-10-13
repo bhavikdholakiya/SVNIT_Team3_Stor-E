@@ -11,16 +11,17 @@ body{
 }
 
 #loginbutton{
-	position:absolute;
-	top:15%;
-	left:90%;
-    height:40px;
-    width:100px;
-    background-color: #BABE3C;
-    color: #3E3E3E;
-    font-size:20px;
-    border-radius:10px;
-    border:transparent;
+	margin-top: 10px;
+    position: absolute;
+    top: 15%;
+    left: 85%;
+    height: 40px;
+    width: 100px;
+    background-color: #a8c6a8;
+    font-size: 20px;
+    border-radius: 10px;
+    border: transparent;
+    text-decoration: none;
 }
 #loginbutton:hover{
     cursor:pointer;
@@ -418,4 +419,44 @@ body{
 
 .customer_name{
     width:100%;
+}
+#signoutbutton{
+    margin-top: 18px;
+    position: relative;
+    top: 15%;
+    left: 82%;
+    height: 40px;
+    width: 100px;
+    background-color: #a8c6a8;
+    font-size: 20px;
+    border-radius: 10px;
+    border: transparent;
+    cursor: pointer;
+}
+
+#signoutbutton1{
+    margin-top: 18px;
+    position: relative;
+    top: 15%;
+    left: 82%;
+    height: 40px;
+    width: 100px;
+    background-color: #a8c6a8;
+    font-size: 20px;
+    border-radius: 10px;
+    border: transparent;
+    cursor: pointer;
+}
+#signoutbutton2{
+    margin-top: 18px;
+    position: relative;
+    top: 15%;
+    left: 82%;
+    height: 40px;
+    width: 100px;
+    background-color: #a8c6a8;
+    font-size: 20px;
+    border-radius: 10px;
+    border: transparent;
+    cursor: pointer;
 }

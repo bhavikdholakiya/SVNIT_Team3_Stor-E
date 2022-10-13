@@ -28,7 +28,7 @@
                 <% } %>
               </a>
   </button>
-  <button onclick="signout()">Signout</button>
+  <button id="signoutbutton" onclick="signout()">Signout</button>
   </header>
   </div>
   <div class="card-wrapper">
@@ -109,6 +109,8 @@
       <span><b>Customer Reviews :</b></span>
       <!-- <img src="/images/Group 26.png" id="sample_img"> -->
     </div>
+    <button id="signoutbutton1" onclick="func2()">RatingSort</button>
+    <button id="signoutbutton2" onclick="func1()">TimeSort</button>
     <div id="reviews-show">
     <% for(let i=0;i<product.comments.length;i++){ %>
       
@@ -122,5 +124,18 @@
     </div>
   </section>
   <script src="/javascript/product.js"></script>
-
+  <script>
+    function func1(){
+      let url=window.location.href;
+      url=(url.split("?")[0]);
+      url+='?sort=1';
+      window.location.href=url;
+    }
+    function func2(){
+      let url=window.location.href;
+      url=(url.split("?")[0]);
+      url+='?sort=2';
+      window.location.href=url;
+    }
+  </script>
 </html>
