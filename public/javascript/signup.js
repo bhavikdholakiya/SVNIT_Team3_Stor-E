@@ -4,7 +4,7 @@ async function signup(){
     user.email=document.getElementById('Email').value;
     user.password=document.getElementById('Password').value;
     user.city=document.getElementById('city').value;
-    console.log(user);
+    // console.log(user);
     await fetch('/user/signup',{
         method:'POST',
         headers:{

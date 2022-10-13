@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/product.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="header">
+    <header id="body-header">
+      <img src="/images/Group 19.png" height="50px" id="logo">
+      <div id="search"><a class="btn" href="#"><i class="fas fa-seaarch"></i></a><input class="input-box" type="text"
+          name="input" placeholder="     Search"><a class="switch" href="#"></a></div>
+      <button id="loginbutton"><a href="/user/login">
+          <% if(user){ %>
+            <%= user.name %>
+              <% } else{ %>
+                Login
+                <% } %>
+              </a>
+  </button>
+  <button onclick="signout()">Signout</button>
+  </header>
+  </div>
+  <div class="card-wrapper">
+    <div class="card">
+      <!-- card left -->
+      <div class="product-imgs">
+        <div class="img-display">
+          <div class="img-showcase">
+            <img src="<%= product.imageUrl %>" alt="shoe image" id="pimage">
+          </div>
+        </div>
+      </div>
+      <div class="product-content">
+        <h2 class="product-title" id="pname"><u>
+            <%= product.name %>
+          </u></h2>
+        <div class="product-rating">
+        </div>
+
+        <div class="product-price" id="pprice">
+          <p class="new-price"><b>Rs <%=product.price %></b></p>
+        </div>
+
+        <div class="product-detail" id="pdetails">
+          <h2>about this item: </h2>
+          <p>
+            <%=product.description %>
+          </p>
+        </div>
+
+        <div class="purchase-info">
+          <input type="number" min="0" value="1">
+          <button type="button" class="btn">
+            Add to Cart
+          </button>
+        </div>
+        <div id="userreview">
+          <div class="container">
+            <div class="rating-wrap">
+              <h2>Star Rating</h2>
+              <div class="center">
+                <fieldset class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" class="full"
+                    title="Awesome"></label>
+                  <input type="radio" id="star4.5" name="rating" value="4.5" /><label for="star4.5"
+                    class="half"></label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" class="full"></label>
+                  <input type="radio" id="star3.5" name="rating" value="3.5" /><label for="star3.5"
+                    class="half"></label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" class="full"></label>
+                  <input type="radio" id="star2.5" name="rating" value="2.5" /><label for="star2.5"
+                    class="half"></label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" class="full"></label>
+                  <input type="radio" id="star1.5" name="rating" value="1.5" /><label for="star1.5"
+                    class="half"></label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" class="full"></label>
+                  <input type="radio" id="star0.5" name="rating" value="0.5" /><label for="star0.5"
+                    class="half"></label>
+                </fieldset>
+              </div>
+
+              <h4 id="rating-value"></h4>
+            </div>
+          </div>
+          <p>
+            <%=product.ratingNumber%> average based on <%=product.comments.length%> reviews.
+          </p>
+        </div>
+        <div id="urating">
+          <textarea rows="5" cols="60" id="ureview"></textarea>
+          <button id="ubutton" onclick="uploadComments('<%= product._id %>')">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="reviews">
+    <div class="comments_heading">
+      <span><b>Customer Reviews :</b></span>
+      <!-- <img src="/images/Group 26.png" id="sample_img"> -->
+    </div>
+    <div id="reviews-show">
+    <% for(let i=0;i<product.comments.length;i++){ %>
+      
+      <div class="customer_name" id="rev">
+        <span align="left"><b><%=product.comments[i].author.name%></b></span>
+        <span align="right" style="font-size: 12px;"><b><%=product.comments[i].updatedAt %></b></span>
+        <span id="rate" align="right"><%=product.comments[i].rating%></span>
+                 <p><%=product.comments[i].reviews%></p>
+      </div>
+    </div>
+    <% } %>
+  </section>
+  <script src="/javascript/product.js"></script>
+
+</html>

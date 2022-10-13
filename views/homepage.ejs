@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,72 +9,43 @@
     <script src="https://kit.fontawesome.com/bec9b21f43.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/homepage.css">
 </head>
+
 <body>
     <div id="header">
         <header id="body-header">
-        <!-- <div id="site-logo"><i class="fas fa-music"></i></div> -->
-        <!-- <div id="site-name"><span class="name1">Vasav</span> <br><span class="name2">Studio</span></div> -->
-        <img src="/images/Group 19.png" height="50px" width="130px" id="logo">
-        <div id="search"><a class="btn" href="#"><i class="fas fa-search"></i></a><input class="input-box" type="text" name="input" placeholder="Search"><a class="switch" href="#"></a></div>
-        <!-- <div id="notification"><a href="#"><i class="fas fa-bell"></i></a></div> -->
-        <!-- <div id="userprofile"><a href="#"><i class="fas fa-user-circle"></i></a><div> -->
-        <div id="loginbutton"><a href="/user/login">LogIn</a></div>
+            <!-- <div id="site-logo"><i class="fas fa-music"></i></div> -->
+            <!-- <div id="site-name"><span class="name1">Vasav</span> <br><span class="name2">Studio</span></div> -->
+            <img src="/images/Group 19.png" height="50px" width="130px" id="logo">
+            <div id="search"><a class="btn" href="#"><i class="fas fa-search"></i></a><input class="input-box"
+                    type="text" name="input" placeholder="Search"><a class="switch" href="#"></a></div>
+            <!-- <div id="notification"><a href="#"><i class="fas fa-bell"></i></a></div> -->
+            <!-- <div id="userprofile"><a href="#"><i class="fas fa-user-circle"></i></a><div> -->
+                <button class="loginbutton"><a href="/user/login"><% if(user){ %>
+                    <%= user.name %>
+                  <% } else{ %>  
+                    Login
+                 <% } %></a>
+            </button>
+            <button onclick="signout()"> 
+                signout
+            </button>
         </header>
-        </div>
-        <div id="products">
-            <div id="proc1" class="p">
-            <span id="image"><img src="https://images.unsplash.com/photo-1565151443833-29bf2ba5dd8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"></span>
-            <span id="pdetails">
-            <span>Product Name</span>
-            </span>
-            </div>
-            <div id="proc2" class="p">
-            <span id="image"><img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=329&q=80"></span>
-            <span id="pdetails">Product Name</span>
-            </div>
-            <div id="proc3" class="p">
-                <span id="image"><img src="https://plus.unsplash.com/premium_photo-1661497658228-cd6f13a4d39c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"></span>
-                <span id="pdetails">Product Name</span>
-            </div>
-            <div id="proc4" class="p">
-                <span id="image"><img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"></span>
-                <span id="pdetails">Product Name</span>
-            </div>
-            <div id="proc5" class="p">
-                <span id="image"><img src="https://images.unsplash.com/photo-1532007271951-c487760934ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"></span>
-                <span id="pdetails">Product Name</span>
-            </div>
-            <div id="proc6" class="p">
-                <span id="image"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"></span>
-                <span id="pdetails">Product Name</span>
-            </div>
-            <div id="proc1" class="p">
-                <span id="image"><img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"></span>
-                <span id="pdetails">
-                Product Name
-                </span>
-                </div>
-                <div id="proc1" class="p">
-                    <span id="image"><img src="https://images.unsplash.com/photo-1608156639585-b3a032ef9689?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80"></span>
-                    <span id="pdetails">
-                    <span>Product Name</span> 
-                    </span>
-                    </div>
-                    <div id="proc1" class="p">
-                        <span id="image"><img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80"></span>
-                        <span id="pdetails">
-                        <span>Product Name</span>
-                        </span>
-                        </div>
-                        <div id="proc1" class="p">
-                            <span id="image"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80"></span>
-                            <span id="pdetails">
-                            <span>Product Name</span>
-                            </span>
-                            </div>
-        </div>
-        <div id="footer">
+    </div>
+    <div id="products">
+       
+            <% for(let i=0;i<products.length;i++){ %>
+                <div class="option1"><button class="opt1" onclick="window.location.href='/product/<%= products[i]._id%>'"><img style="border-radius: 10px;" width="80%"
+                    height="80%" src="<%= products[i].imageUrl %>">
+                <p><%= products[i].name %></p>
+                <p><%= products[i].description %></p>
+                <p><%= products[i].price %></p>
+            </button></div>
+            <% } %>
+    </div>
+</div>
+    <div id="footer">
         All Rights Reserved | 2022 | Store.com
-        </div>
+    </div>
 </body>
+<script src="/javascript/homepage.js"></script>
 </html>

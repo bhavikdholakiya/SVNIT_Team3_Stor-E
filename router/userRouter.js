@@ -5,7 +5,6 @@ const isAuth=require("../config/isAuth");
 //login----------------------------------------------------------------------------
 router.route("/login").post(async (req, res, next) => {
     try {
-        console.log(req.body);
       const user = req.body;
       const found = await User.findOne({
         email: user.email,

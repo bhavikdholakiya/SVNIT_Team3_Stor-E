@@ -13,6 +13,9 @@ const commentSchema = new Schema({
     author: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
+    },
+    date:{
+        type:Number
     }
 },{timestamps:true})
 const productSchema = new Schema({
@@ -27,6 +30,7 @@ const productSchema = new Schema({
     },
     imageUrl:{
         type:String,
+        required: true
     },
     price: {
         type: Number,
@@ -34,12 +38,7 @@ const productSchema = new Schema({
     },
     ratingNumber: {
         type: Number,
-        default: 0,
-        validate(count) {
-            if (count != 0) {
-                throw new Error("You can't set ratingNumber of any product")
-            }
-        }
+        default:0
     },
     reviewNumber: {
         type: Number,
