@@ -127,13 +127,14 @@ body {
     margin-top: 10px;
     position: absolute;
     top: 15%;
-    left: 90%;
+    left: 84%;
     height: 40px;
     width: 100px;
     background-color: #a8c6a8;
     font-size: 20px;
     border-radius: 10px;
     border: transparent;
+    text-decoration: none;
 }
 
 .loginbutton:hover {
@@ -260,4 +261,18 @@ body {
     border-radius: 10px;
     border: 0px;
     transition: border 0.5s ease-in-out;
+}
+
+#signoutbutton{
+    margin-top: 18px;
+    position: relative;
+    top: 15%;
+    left: 82%;
+    height: 40px;
+    width: 100px;
+    background-color: #a8c6a8;
+    font-size: 20px;
+    border-radius: 10px;
+    border: transparent;
+    cursor: pointer;
 }

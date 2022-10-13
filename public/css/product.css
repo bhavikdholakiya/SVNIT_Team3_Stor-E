@@ -412,5 +412,10 @@ body{
 
 #reviews-show{
     display:flex;
-    width:100%
+    flex-direction: column;
+    width:100%;
+}
+
+.customer_name{
+    width:100%;
 }

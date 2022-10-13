@@ -56,6 +56,8 @@ async function uploadComments(id){
         body:JSON.stringify(obj)
     });
     const result=await response.json();
+    url=window.location.href;
+    window.location.href=url;
 
 }
 async function signout(){

@@ -56,6 +56,6 @@ app.use(function(err, req, res, next) {
 
   //CREATING SERVER
 const server=http.createServer(app);
-server.listen(process.env.PORT||3000,process.env.HOST,()=>{
+server.listen(process.env.PORT||3000,()=>{
     console.log('Successfully connected to Server');
 });
