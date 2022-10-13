@@ -57,15 +57,19 @@ Finally go to your web browser and open "localhost:3000".
 Some images of the website are as shown below:
 
 Login Page:
+![f25](https://user-images.githubusercontent.com/72694914/195579596-67b36605-8f93-41bc-aef9-2ddc6dbcdfc1.png)
 
 
 Sign-up Page:
+![f6](https://user-images.githubusercontent.com/72694914/195579622-0118af37-541d-480f-849a-7bac9b781fbd.png)
 
 
 Home/Landing page:
+![fnf2](https://user-images.githubusercontent.com/72694914/195579637-b755905e-86d4-4d8f-92a3-901a18c4e7d0.png)
 
 
 Product Page:
+![fnf](https://user-images.githubusercontent.com/72694914/195579651-b40cf301-c5ba-43f6-a31e-14124e91e581.png)
 
 
 
